@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How's Your Day?</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  #question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: #333;
+    text-decoration: underline;
+  }
+  #response {
+    margin-top: 20px;
+    display: none;
+    font-size: 18px;
+    color: #666;
+  }
+  #instruction {
+    font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+  }
+  #profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+  /* Media query for smaller screens (mobile devices) */
+  @media only screen and (max-width: 600px) {
+    #profile-pic {
+      width: 100px;
+      height: 100px;
+    }
+    #question {
+      font-size: 20px;
+    }
+    #instruction {
+      font-size: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+  <img id="profile-pic" src="download.jpg" alt="Ace's Picture">
+<h1>Hi, I'm Ace! May I know...</h1>
+<h1 id="question">How's your day?</h1>
+<p id="instruction">(Click the question to answer)</p>
+
+<div id="response">
+  <p>That's wonderful to hear!</p>
+  <p>Remember, every day is a new opportunity to make memories, learn something new, and enjoy the little moments. Even if your day isn't going as planned, take a moment to appreciate the small victories and find something to be grateful for.</p>
+  <p>If you're ever feeling overwhelmed or stressed, don't hesitate to reach out to someone you trust or take a break to recharge. Self-care is important, and it's okay to prioritize your well-being.</p>
+  <p>Wishing you continued happiness and positivity!</p>
+  <p>Greetings from Ace! I'm glad you shared your day with me. Thanks!</p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const question = document.getElementById('question');
+    const response = document.getElementById('response');
+
+    question.addEventListener('click', function() {
+      const userResponse = prompt('How is your day?');
+      if (userResponse !== null && userResponse !== '') {
+        response.style.display = 'block';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
